@@ -281,7 +281,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +292,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -306,9 +306,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>worklfowr/</code> <span
@@ -331,31 +331,36 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong9a585c3">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomkazan19788cmdzajeciatree1f69d12e8736f4183166233bf6017c2ff98256bctargetblank1f69d12a">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 9a585c3
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/kazan19788-cmd/zajecia/tree/1f69d12e8736f4183166233bf6017c2ff98256bc" target="_blank">1f69d12</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong9a585c3"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomkazan19788cmdzajeciatree1f69d12e8736f4183166233bf6017c2ff98256bctargetblank1f69d12a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -364,7 +369,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 9a585c3.
+The results in this page were generated with repository version
+<a href="https://github.com/kazan19788-cmd/zajecia/tree/1f69d12e8736f4183166233bf6017c2ff98256bc" target="_blank">1f69d12</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -383,6 +389,8 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    cw7(2)/
+    Ignored:    cw8/worklfowr/.Rhistory
+    Ignored:    cw8/worklfowr/.Rproj.user/
 
 Untracked files:
     Untracked:  Jakub Kostecki_cw3.R
@@ -396,6 +404,7 @@ Untracked files:
 
 Unstaged changes:
     Modified:   cw8/worklfowr/analysis/_site.yml
+    Modified:   cw8/worklfowr/analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -442,10 +451,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/kazan19788-cmd/zajecia/1f69d12e8736f4183166233bf6017c2ff98256bc/cw8/worklfowr/docs/index.html" target="_blank">1f69d12</a>
+</td>
+<td>
+kazan19788-cmd
+</td>
+<td>
+2026-11-24
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-9a585c3
+<a href="https://github.com/kazan19788-cmd/zajecia/blob/9a585c3d03a2dc6fae62867bfb4ed1ee94832840/cw8/worklfowr/analysis/index.Rmd" target="_blank">9a585c3</a>
 </td>
 <td>
 kazan19788-cmd
@@ -462,7 +488,7 @@ Dodanie nowych analiz
 html
 </td>
 <td>
-9a585c3
+<a href="https://rawcdn.githack.com/kazan19788-cmd/zajecia/9a585c3d03a2dc6fae62867bfb4ed1ee94832840/cw8/worklfowr/docs/index.html" target="_blank">9a585c3</a>
 </td>
 <td>
 kazan19788-cmd
@@ -479,7 +505,7 @@ Dodanie nowych analiz
 Rmd
 </td>
 <td>
-5fd014b
+<a href="https://github.com/kazan19788-cmd/zajecia/blob/5fd014b3efdcc57199e1d9415420a58f1656f7ae/cw8/worklfowr/analysis/index.Rmd" target="_blank">5fd014b</a>
 </td>
 <td>
 kazan19788-cmd
@@ -498,7 +524,7 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p><a href="dzionselka.html">raport</a></p>
+<p><a href="dzionselka.html">raport1</a></p>
 </div>
 </div>
 </div>
